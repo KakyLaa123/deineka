@@ -1,0 +1,941 @@
+@font-face {
+    font-family: "Uni Neue";
+    src: url(fonts/UniNeueBook.ttf);
+}
+
+@font-face {
+    font-family: "Uni Neue Bold";
+    src: url(fonts/UniNeueBlack.ttf);
+}
+
+@font-face {
+    font-family: "Uni Neue Half-Bold";
+    src: url(fonts/UniNeueBold.ttf);
+}
+
+@font-face {
+    font-family: "Uni Neue Regular";
+    src: url(fonts/UniNeueRegular.ttf);
+}
+
+@font-face {
+    font-family: "Uni Neue Heavy";
+    src: url(fonts/UniNeueHeavy.ttf);
+}
+
+button{
+    -webkit-appearance: none;
+}
+
+a{
+    -webkit-appearance: none;
+}
+
+body{
+    font-family: "Uni Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(img/background.png) no-repeat;
+    background-size: 100vw;
+    font-stretch: expanded;
+}
+
+.header{
+    width: 82vw;
+    height: 7vw;
+    margin: 0 auto;
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header__logo-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25vw;
+}
+
+.img__logo{
+    display: block;
+    width: 9.5vw;
+}
+
+.logo-block__description{
+    font-family: "Uni Neue Half-Bold";
+    width: 15vw;
+    font-size: 0.9vw;
+    line-height: 1.4vw;
+}
+
+.description__bold{
+    font-family: "Uni Neue Bold";
+}
+
+.map-block__btn{
+    background: transparent;
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 12vw;
+    height: 8vh;
+    gap: 1vw;
+}
+
+.btn__img{
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 50%;
+    border: 0.1vw solid #DADADA;
+    cursor: pointer;
+}
+
+.map-block__description{
+    width: 9.5vw;
+    font-size: 0.8vw;
+    text-align: left;
+}
+
+.map-block__description:hover{
+    color: #F4794F;
+    cursor: pointer;
+}
+
+.header__lang{
+    width: 5vw;
+    height: 3vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    align-items: center;
+}
+
+.lang__title{
+    font-size: 0.8vw;
+    font-family: "Uni Neue Half-Bold";
+    line-height: 1vw;
+}
+
+.lang__form{
+    width: 3vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+}
+
+.choise__rad{
+    display: none;
+}
+
+.lang__choise{
+    display: block;
+    font-size: 0.8vw;
+    font-family: "Uni Neue Half-Bold";
+    line-height: 1vw;
+    width: 1vw;
+}
+
+.lang__choise:hover{
+    cursor: pointer;
+    color: #F4794F;
+}
+
+.lang__choise__checked{
+    color: #F4794F;
+}
+
+.header__menu-open{
+    display: none;
+    background: transparent;
+    border: 0;
+    line-height: 3px;
+    font-weight: bold;
+    color: #333333;
+    height: 20px;
+}
+
+.button-consoult__btn{
+    position: relative;
+    font-family: "Uni Neue Half-Bold";
+    width: 12.8vw;
+    height: 3.8vw;
+    border: 0;
+    padding: 1.35vw 0;
+    border-radius: 0.3vw;
+    color: #ffffff;
+    font-size: 0.8vw;
+    background: #313D4B;
+    overflow:hidden;
+}
+
+.button-consoult__btn:hover{
+    box-shadow: inset 0 0.2vw 0 #626E83;
+    cursor: pointer;
+}
+
+.button-consoult__btn::after{
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 200%;
+    top: -2vw;
+    left: -21%;
+    transform: rotate(45deg);
+    background: #ffffff;
+    animation: grad 15s infinite;
+}
+
+@keyframes grad {
+    0%{
+        left: -21%;
+    }
+    100%{
+        left: 13000%;
+    }
+}
+
+.header__contacts{
+    width: 15vw;
+    height: 4.4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4vw;
+}
+
+.contacts__phone{
+    font-family: "Uni Neue Bold";
+    font-weight: 800;
+    font-size: 1.1vw;
+}
+
+.phone__img{
+    width: 0.8vw;
+    height: 0.8vw;
+}
+
+.contacts__messengers{
+    display: flex;
+    width: 9.5vw;
+    justify-content: center;
+}
+
+.messengers__ref, .messengers__viber, .messengers__teleg, .messengers__whats{
+    display: block;
+    margin: 0 0.5vw;
+    width: 2.6vw;
+    height: 2.6vw;
+}
+
+.messengers__ref:hover, .messengers__viber:hover, .messengers__teleg:hover, .messengers__whats:hover{
+    margin: 0 0.4vw;
+    width: 2.8vw;
+    height: 2.8vw;
+}
+
+main{
+    width: 82vw;
+    margin: 0 auto;
+}
+
+.menu__list{
+    font-family: "Uni Neue Half-Bold";
+    width: 82vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 2vw 0 3.8vw 0;
+    list-style-type: none;
+}
+
+.list__element-reference{
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.9vw;
+    font-weight: bold;
+    color: #282728;
+}
+
+.list__element-reference:hover{
+    color: #8AA4D1;
+}
+
+.left-block{
+    width: 46vw;
+}
+
+.left-block__title{
+    font-size: 3.3vw;
+    line-height: 3.5vw;
+    color: #282728;
+}
+
+.title__bold{
+    font-family: "Uni Neue Half-Bold";
+    font-size: 3.3vw;
+    margin: 0;
+}
+
+.left-block__list{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 4vw 0 0 0;
+    gap: 2.5vw;
+}
+
+.left-block__list-element-main{
+    font-weight: bold;
+    display: flex;
+    gap: 0.5vw;
+    width: 35vw;
+    margin-left: 1.6vw;
+    position: relative;
+}
+
+.list-element-main__num{
+    font-family: "Uni Neue Heavy";
+    line-height: 3.5vw;
+    font-size: 3.8vw;
+    color: #282728;
+}
+
+.list-element-main__elem{
+    font-size: 1.05vw;
+    line-height: 1.2vw;
+    font-weight: normal;
+    width: 11.2vw;
+}
+
+.left-block__list-element{
+    font-size: 1.05vw;
+    line-height: 1.2vw;
+    font-weight: normal;
+    width: 24vw;
+    margin-left: 1.6vw;
+    position: relative;
+}
+
+.left-block__list-element:first-child{
+    margin-left: 0;
+}
+
+.list-item__bold{
+    font-family: "Uni Neue Half-Bold";
+}
+
+.list-elem__border{
+    width: 1.2vw;
+    position: absolute;
+    left: -1.8vw;
+    top: -0.5vw;
+}
+
+.left-block__bottom-block{
+    width: 46vw;
+    margin-top: 2.2vw;
+    display: flex;
+    align-items: flex-end;
+    gap: 3.5vw;
+}
+
+.bottom-block__left{
+    width: 22vw;
+}
+
+.bottom-block__left-text{
+    display: block;
+    margin: 0 auto;
+    width: 20vw;
+    font-size: 0.95vw;
+    line-height: 1.4vw;
+    margin-bottom: 1.2vw;
+    font-family: "Uni Neue Regular"
+}
+
+.left-text__sale{
+    font-family: "Uni Neue Half-Bold";
+    background: #ffffff;
+    border-radius: 0.2vw;
+    padding: 0 0.2vw;
+}
+
+.bottom-block__left-btn{
+    display: block;
+    position: relative;
+    width: 22.2vw;
+    height: 5.3vw;
+    border-radius: 0.5vh;
+    filter: drop-shadow(0px 1.2vw 1.5vw rgba(254,88,81,0.1)) drop-shadow(0px 0.3vw 0px #e63c3c);
+    background: linear-gradient(0deg, #fd4f4f 0%, #FD7C55 100%);
+    border: 0;
+    margin-bottom: 0.6vw;
+    overflow: hidden;
+}
+
+.bottom-block__left-btn:hover{
+    box-shadow: inset 0 0.2vw 0.2vw 0 #C05641;
+    filter: none;
+    cursor: pointer;
+}
+
+.bottom-block__left-btn::after{
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 200%;
+    top: -2.5vw;
+    left: -21%;
+    transform: rotate(45deg);
+    background: #ffffff;
+    animation: grad 15s infinite;
+}
+
+.left-btn__btn-value{
+    display: flex;
+    width: 18vw;
+    height: 5.5vw;
+    gap: 1vw;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.left-btn__img{
+    display: block;
+    width: 2vw;
+    height: 2vw;
+}
+
+.left-btn__text{
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.9vw;
+    text-align: left;
+    color: #ffffff;
+    font-family: "Uni Neue Regular", sans-serif;
+}
+
+.bottom-block__right{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+.bottom-block__right-text{
+    display: block;
+    font-size: 0.82vw;
+    font-family: "Uni Neue Regular";
+}
+
+.bottom-block__right-licences{
+    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+}
+
+.right-licences__lic-img{
+    display: block;
+    width: 4.5vw;
+    cursor: pointer;
+}
+
+.right-licences__btn-prev, .right-licences__btn-next{
+    display: block;
+    border: 0;
+    background: transparent;
+}
+
+.right-licences__btn-prev img, .right-licences__btn-next img{
+    width: 0.6vw;
+    display: none;
+}
+
+.right-licences__btn-next img{
+    transform: rotate(180deg);
+}
+
+.map-full{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    padding: 5vw 5vw;
+}
+
+.map-full__map{
+    width: 90vw;
+    height: 40vw;
+}
+
+.map-full__close{
+    position: absolute;
+    right: 5vw;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.map-full__close:hover{
+    color: #333333;
+    text-decoration: underline;
+}
+
+.img-full{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.img-full__close{
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.img-full__close:hover{
+    color: #333333;
+    text-decoration: underline;
+}
+
+.img-full__img-area{
+    text-align: center;
+}
+
+.img-area__img{
+    width: 40vw;
+}
+
+@media (max-width: 992px) {
+    body{
+        background-size: 130vh;
+        background-position: center;
+    }
+
+    .logo-block__description{
+        display: none;
+    }
+
+    .header__map-block{
+        display: none;
+    }
+
+    .header__logo-block{
+        width: 75px;
+        display: block;
+    }
+
+    .img__logo{
+        width: 75px;
+    }
+
+    .header__lang{
+        width: 80px;
+        height: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .lang__title{
+        font-size: 10px;
+        width: 60px;
+    }
+
+    .lang__form{
+        width: 35px;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+
+    .lang__choise{
+        font-size: 10px;
+        line-height: 12px;
+        width: 30px;
+    }
+
+    .button-consoult__btn{
+        width: 160px;
+        height: 35px;
+        font-size: 8px;
+        border-radius: 4px;
+    }
+
+    .header__contacts{
+        width: 120px;
+    }
+
+    .contacts__phone{
+        width: 110px;
+    }
+
+    .contacts__messengers{
+        width: 80px;
+    }
+
+    .phone__img{
+        width: 8px;
+        height: 8px;
+    }
+
+    .phone__num{
+        font-size: 10px;
+    }
+
+    .messengers__ref{
+        width: 16px;
+        height: 16px;
+    }
+
+    .messengers__viber, .messengers__teleg, .messengers__whats{
+        width: 16px;
+        height: 16px;
+    }
+
+    .messengers__ref:hover, .messengers__viber:hover, .messengers__teleg:hover, .messengers__whats:hover{
+        width: 20px;
+        height: 20px;
+    }
+
+    .header{
+        width: auto;
+        max-width: 992px;
+        padding: 0 20px;
+        height: auto;
+        min-height: 80px;
+        gap: auto;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+        /* margin-top: 15px; */
+    }
+
+    main{
+        width: auto;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    
+    .menu__list{
+        width: 100%;
+        margin: 10px 0 20px 0;
+    }
+
+    .list__element-reference{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 6px;
+        font-weight: bold;
+        color: #282728;
+    }
+
+    .left-block{
+        width: 100%;
+    }
+
+    .left-block__title{
+        font-size: 16px;
+        line-height: 15px;
+        color: #282728;
+        margin: 30px 0 20px 10px;
+    }
+    
+    .title__bold{
+        font-size: 16px;
+    }
+
+    .left-block__list{
+        flex-direction: column;
+        margin: 10px 0 0 0;
+        gap: 20px;
+    }
+    
+    .left-block__list-element-main{
+        font-weight: bold;
+        display: flex;
+        gap: 5px;
+        width: auto;
+        margin-left: 15px;
+        position: relative;
+    }
+    
+    .list-element-main__num{
+        font-family: "Uni Neue Heavy";
+        line-height: 26px;
+        font-size: 30px;
+        color: #282728;
+    }
+    
+    .list-element-main__elem{
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: normal;
+        width: 300px;
+    }
+    
+    .left-block__list-element{
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: normal;
+        width: 300px;
+        margin-left: 15px;
+    }
+
+    .bottom-block__left{
+        width: 22vw;
+    }
+
+    .bottom-block__left-text{
+        display: block;
+        margin: 0 auto;
+        width: 20vw;
+        font-size: 0.95vw;
+        line-height: 1.4vw;
+        margin-bottom: 1.2vw;
+        font-family: "Uni Neue Regular"
+    }
+
+    .left-text__sale{
+        font-family: "Uni Neue Half-Bold";
+        background: #ffffff;
+        border-radius: 0.2vw;
+        padding: 0 0.2vw;
+    }
+
+    .bottom-block__left-btn{
+        display: block;
+        position: relative;
+        width: 22.2vw;
+        height: 5.3vw;
+        border-radius: 0.5vh;
+        filter: drop-shadow(0px 1.2vw 1.5vw rgba(254,88,81,0.1)) drop-shadow(0px 0.3vw 0px #e63c3c);
+        background: linear-gradient(0deg, #fd4f4f 0%, #FD7C55 100%);
+        border: 0;
+        margin-bottom: 0.6vw;
+        overflow: hidden;
+    }
+
+    .bottom-block__left-btn:hover{
+        box-shadow: inset 0 0.2vw 0.2vw 0 #C05641;
+        filter: none;
+        cursor: pointer;
+    }
+
+    .bottom-block__left-btn::after{
+        position: absolute;
+        content: "";
+        width: 10%;
+        height: 200%;
+        top: -2.5vw;
+        left: -21%;
+        transform: rotate(45deg);
+        background: #ffffff;
+        animation: grad 15s infinite;
+    }
+
+    .left-btn__btn-value{
+        display: flex;
+        width: 18vw;
+        height: 5.5vw;
+        gap: 1vw;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .left-btn__img{
+        display: block;
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .left-btn__text{
+        display: block;
+        text-transform: uppercase;
+        font-size: 0.9vw;
+        text-align: left;
+        color: #ffffff;
+        font-family: "Uni Neue Regular", sans-serif;
+    }
+
+    .bottom-block__right{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vw;
+    }
+
+    .bottom-block__right-text{
+        display: block;
+        font-size: 0.82vw;
+        font-family: "Uni Neue Regular";
+    }
+
+    .bottom-block__right-licences{
+        display: block;
+        display: flex;
+        align-items: center;
+        gap: 0.8vw;
+    }
+
+    .right-licences__lic-img{
+        display: block;
+        width: 4.5vw;
+        cursor: pointer;
+    }
+
+    .right-licences__btn-prev, .right-licences__btn-next{
+        display: block;
+        border: 0;
+        background: transparent;
+    }
+
+    .right-licences__btn-prev img, .right-licences__btn-next img{
+        width: 0.6vw;
+        display: none;
+    }
+
+    .right-licences__btn-next img{
+        transform: rotate(180deg);
+    }
+
+    .left-block__bottom-block{
+        width: 100%;
+        margin-top: 20px;
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .bottom-block__left{
+        width: auto;
+    }
+
+    .bottom-block__left-text{
+        margin: 0 10px;
+        width: 180px;
+        font-size: 8px;
+        line-height: 12px;
+        margin: 0 auto 5px 10px;
+    }
+
+    .left-text__sale{
+        font-family: "Uni Neue Half-Bold";
+        background: #ffffff;
+        border-radius: 4px;
+        padding: 0 3px;
+    }
+
+    .bottom-block__left-btn{
+        display: block;
+        position: relative;
+        width: 120px;
+        height: 30px;
+        border-radius: 4px;
+        filter: drop-shadow(0px 10px 8px rgba(254,88,81,0.1)) drop-shadow(0px 3px 0px #e63c3c);
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .bottom-block__left-btn:hover{
+        box-shadow: inset 0 2px 2px 0 #C05641;
+    }
+
+    .left-btn__btn-value{
+        display: flex;
+        width: 100px;
+        height: 25px;
+        gap: 5px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .left-btn__img{
+        width: 15px;
+        height: 15px;
+    }
+
+    .left-btn__text{
+        font-size: 5px;
+    }
+
+    .bottom-block__right{
+        margin-left: 10px;
+        gap: 10px;
+    }
+
+    .bottom-block__right-text{
+        font-size: 8px;
+    }
+
+    .bottom-block__right-licences{
+        gap: 10px;
+    }
+
+    .right-licences__lic-img{
+        width: 30px;
+    }
+
+}
+
+@media (max-width: 525px) {
+    .menu__list{
+        display: none;
+    }
+    
+    .header__menu-open{
+        display: block;
+        width: 130px
+    }
+
+    .menu__list{
+        position: fixed;
+        left: 0;
+        top: -10px;
+        flex-direction: column;
+        justify-content: start;
+        gap: 10px;
+        width: 100px;
+        height: 100vh;
+        background: #ffffff;
+        z-index: 30;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .header__menu-open{
+        width: 50px
+    }
+
+    .phone__num{
+        font-size: 8px;
+    }
+}
